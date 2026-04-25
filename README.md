@@ -6,9 +6,9 @@ O **Semester-Blaster** é um shooter espacial de progressão lateral desenvolvid
 
 <div align="center">
   <img src="intro.png" width="250" alt="Menu Inicial">
-  <img src="fase1.png" width="250" alt="Primeira Fase">
+  <!-- <img src="fase1.png" width="250" alt="Primeira Fase">
   <img src="thanosfase.png" width="250" alt="Confronto Final">
-  <img src="upgradenaves.png" width="250" alt="Upgrade Naves">
+  <img src="upgradenaves.png" width="250" alt="Upgrade Naves"> -->
 </div>
 
 ---
