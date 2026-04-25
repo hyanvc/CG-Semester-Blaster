@@ -15,6 +15,13 @@ O **Semester-Blaster** é um shooter espacial de progressão lateral desenvolvid
 
 ---
 
+
+## Linhas:
+
+O jogo conta com mais de 1000 linhas de código apenas no script.js
+---
+
+
 ## Equipe
 * **Desenvolvedor:** Hyan Victor Cunha Gomes
 * **Testadora e Quality Assurance:** Yasmin
