@@ -6,7 +6,7 @@ O **Semester-Blaster** é um shooter espacial de progressão lateral desenvolvid
 
 
 <div align="center">
-  <img src="nave.png" width="80%" alt="Nave do Jogador">
+  <img src="intro.png" width="80%" alt="Menu">
   <br><br>
   <img src="fase1.png" width="80%" alt="Primeira Fase">
   <br><br>
