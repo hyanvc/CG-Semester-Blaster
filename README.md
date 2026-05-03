@@ -11,6 +11,15 @@ O jogo traz uma forte metáfora da jornada universitária: o jogador controla um
 
 ---
 
+
+## Video Explicando e Jogando:
+
+
+https://www.youtube.com/watch?v=3rdQAYKy1Pw
+---
+
+
+
 ##  Equipe de Desenvolvimento
 
 * **Hyan Victor** - *Engenharia de Software & Programação Gráfica* (Implementação de todos os algoritmos de rasterização, motor físico e game loop)[cite: 2].
@@ -97,9 +106,3 @@ Para que o motor gráfico funcione corretamente — especialmente a leitura em m
 
 > *"Achou que ia escapar, moleque? Vai passar 10 anos na UECE!" - THANOS-TCC, O Chefão.*
 
-
-## Video Explicando e Jogando:
-
-
-https://www.youtube.com/watch?v=3rdQAYKy1Pw
----
