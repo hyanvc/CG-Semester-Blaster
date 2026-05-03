@@ -11,14 +11,14 @@ O jogo traz uma forte metáfora da jornada universitária: o jogador controla um
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+##  Equipe de Desenvolvimento
 
 * **Hyan Victor** - *Engenharia de Software & Programação Gráfica* (Implementação de todos os algoritmos de rasterização, motor físico e game loop)[cite: 2].
 * **Yasmin** - *Quality Assurance (QA) & Playtesting* (Responsável por balanceamento de dificuldade, testes de *edge-cases* na colisão e validação de usabilidade).
 
 ---
 
-## ⚙️ Arquitetura e Motor Gráfico (Requisitos de CG)
+##  Arquitetura e Motor Gráfico (Requisitos de CG)
 
 O grande diferencial técnico deste projeto é a **abstenção do uso de funções prontas da API Canvas** (como `ctx.fillRect`, `ctx.arc` ou `ctx.lineTo`) para a renderização das entidades de jogo. Todo o motor de renderização foi escrito na mão, manipulando a memória de vídeo através de um *Buffer* de pixels (`ImageData`)[cite: 3].
 
@@ -52,7 +52,7 @@ Abaixo detalhamos como cada requisito da disciplina foi implementado na arquitet
 
 ---
 
-## 🕹️ Mecânicas, Gameplay e Sistemas
+## Mecânicas, Gameplay e Sistemas
 
 * **Naves e Upgrades (Loja):** Com as moedas dropadas por inimigos, o jogador pode comprar Upgrades que alteram completamente a lógica de `Cooldown` da nave. O jogo conta com Tiros Simples, Tiros Rápidos e uma Nave Automática Final de Tiro Duplo[cite: 3].
 * **Sistema de Fases e Progressão:** A dificuldade escala logicamente (Semestre 1, Semestre 2, Chefão) aumentando as linhas de inimigos[cite: 3].
@@ -64,7 +64,7 @@ Abaixo detalhamos como cada requisito da disciplina foi implementado na arquitet
 ---
 ---
 
-## 🚀 Como Rodar o Projeto
+##  Como Rodar o Projeto
 
 Para que o motor gráfico funcione corretamente — especialmente a leitura em memória das texturas (como a imagem do Boss Final) —, o jogo **não pode** ser aberto simplesmente com um duplo-clique no arquivo `index.html` (protocolo `file:///`). É necessário rodar em um servidor local para evitar bloqueios de segurança (CORS) do navegador no uso do HTML5 Canvas.
 
