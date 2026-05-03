@@ -374,15 +374,7 @@ bossImgReal.onload = () => {
 };
 
 let bgOffset = 0;
-function drawBackground() {
-    ctx.fillStyle = "#020208"; ctx.fillRect(0, 0, canvas.width, canvas.height);
-    if (bgImg.complete && bgImg.naturalWidth > 0) {
-        bgOffset += 0.8; ctx.globalAlpha = 0.15;
-        ctx.drawImage(bgImg, 0, bgOffset % canvas.height, canvas.width, canvas.height);
-        ctx.drawImage(bgImg, 0, (bgOffset % canvas.height) - canvas.height, canvas.width, canvas.height);
-        ctx.globalAlpha = 1;
-    }
-}
+
 
 function drawStarFieldManual() {
     const cx = canvas.width / 2, cy = canvas.height / 2;
@@ -666,7 +658,6 @@ function draw() {
     if (screenShake > 0) ctx.translate((Math.random()-0.5)*screenShake*2, (Math.random()-0.5)*screenShake*2);
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBackground(); // A imagem png de fundo espacial é deixada via canvas nativo (permitido)
 
     if (!gameOver || explosions.length > 0) {
         imgData = new ImageData(canvas.width, canvas.height); // Zera o buffer (Fundo Transparente)
@@ -803,13 +794,12 @@ function drawAcademicLogo() {
 function menuLoop() {
     if (!gameStarted) {
         if (!logoDrawn && canvas.style.display !== "none") {
-            ctx.clearRect(0, 0, canvas.width, canvas.height); drawBackground(); 
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
             initPixels(); drawAcademicLogo(); renderPixels(); logoDrawn = true; 
         }
     }
     requestAnimationFrame(menuLoop);
 }
 
-// ================== INIT ==================
 canvas.style.display = "block"; 
 initStarField3D(); initPixels(); loop(); menuLoop();

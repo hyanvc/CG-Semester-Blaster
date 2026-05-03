@@ -62,16 +62,24 @@ Abaixo detalhamos como cada requisito da disciplina foi implementado na arquitet
 * **Efeitos Visuais:** Animações baseadas em frame/tempo que não dependem da taxa de atualização do monitor: Partículas de explosão (`createExplosion`), Starfield infinito via manipulação de Coordenadas Z simuladas em 2D, e tremores de tela (`screenShake`) ao levar dano[cite: 3].
 
 ---
+---
 
-## 🚀 Como Executar Localmente
+## 🚀 Como Rodar o Projeto
 
-Nenhuma dependência do NPM, Build ou Servidor Local é obrigatória. O projeto é puramente Web-Nativo.
+Para que o motor gráfico funcione corretamente — especialmente a leitura em memória das texturas (como a imagem do Boss Final) —, o jogo **não pode** ser aberto simplesmente com um duplo-clique no arquivo `index.html` (protocolo `file:///`). É necessário rodar em um servidor local para evitar bloqueios de segurança (CORS) do navegador no uso do HTML5 Canvas.
 
-1. Faça o clone ou download deste repositório em sua máquina.
-2. Certifique-se de que a estrutura base mantenha os arquivos de imagem (`space.png`, `thanos2.png`) no mesmo diretório que o arquivo principal[cite: 3].
-3. Abra o arquivo `index.html` em qualquer navegador web moderno com suporte a Canvas HTML5 (Google Chrome, Firefox, Microsoft Edge, Brave, etc).
-4. *Opcional:* Se houver bloqueio de CORS (devido às imagens e Texturas) ao abrir diretamente, use uma extensão de "Live Server" no VS Code ou o comando `python -m http.server`.
+**A forma mais fácil de testar é usando o Visual Studio Code (VS Code):**
 
+1. **Abra o VS Code:** Abra a pasta raiz do projeto (`Semester-Blaster`) no seu Visual Studio Code.
+2. **Instale a extensão Live Server:**
+   - Vá até a aba de **Extensões** no menu lateral esquerdo (ou pressione `Ctrl+Shift+X`).
+   - Pesquise por **"Live Server"** (criado por *Ritwick Dey*).
+   - Clique em **Instalar**.
+3. **Inicie o Jogo:**
+   - No painel de arquivos do VS Code, clique com o botão direito em cima do arquivo `index.html`.
+   - Selecione a opção **"Open with Live Server"** (ou clique no botão **"Go Live"** que vai aparecer na barra inferior do VS Code).
+4. O seu navegador padrão vai abrir automaticamente no endereço `http://127.0.0.1:5500/index.html`. 
+5. Agora é só jogar, sobreviver aos semestres e tentar não reprovar no TCC!
 ---
 
 ## ⌨️ Controles
