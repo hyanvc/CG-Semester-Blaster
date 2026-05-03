@@ -766,14 +766,38 @@ function setDifficulty(lvl) {
 }
 
 // ================== TELA DE ABERTURA ACADÊMICA ==================
-function drawAcademicLogo() {
-    // 1. RETA: Moldura do logo
-    drawLine(10, 10, 150, 10, [0, 255, 255, 255]); drawLine(150, 10, 150, 100, [0, 255, 255, 255]);
-    drawLine(150, 100, 10, 100, [0, 255, 255, 255]); drawLine(10, 100, 10, 10, [0, 255, 255, 255]);
-    // 2. CÍRCULO e ELIPSE
-    drawCircleMidpoint(80, 55, 25, [255, 255, 0, 255]); drawEllipseMidpoint(80, 55, 45, 15, [255, 0, 255, 255]);
-    // 3. FLOOD FILL
-    floodFill(80, 55, [255, 200, 0, 255]);
+function drawSideDecoration(cx, cy) {
+    // 1. RETA: Desenhando um losango tecnológico ao redor
+    drawLine(cx, cy - 70, cx + 60, cy, [0, 255, 255, 255]); // Topo -> Dir
+    drawLine(cx + 60, cy, cx, cy + 70, [0, 255, 255, 255]); // Dir -> Base
+    drawLine(cx, cy + 70, cx - 60, cy, [0, 255, 255, 255]); // Base -> Esq
+    drawLine(cx - 60, cy, cx, cy - 70, [0, 255, 255, 255]); // Esq -> Topo
+
+    // 2. ELIPSE: Anéis do planeta
+    drawEllipseMidpoint(cx, cy, 75, 18, [255, 0, 255, 255]); // Anel externo
+
+    // 3. CÍRCULO: Planeta principal
+    drawCircleMidpoint(cx, cy, 35, [255, 255, 0, 255]); 
+
+    // Reta cortando o planeta (equador)
+    drawLine(cx - 35, cy, cx + 35, cy, [255, 100, 0, 255]);
+
+    // 4. FLOOD FILL: Pintando as áreas delimitadas
+    // Pintando o planeta (dividido pela reta do equador)
+    floodFill(cx, cy - 15, [255, 200, 0, 255]); // Metade superior (Amarelo)
+    floodFill(cx, cy + 15, [200, 100, 0, 255]); // Metade inferior (Laranja)
+    
+    // Pintando as pontas dos anéis
+    floodFill(cx - 55, cy, [100, 0, 150, 255]); // Anel esquerdo (Roxo)
+    floodFill(cx + 55, cy, [100, 0, 150, 255]); // Anel direito (Roxo)
+}
+
+function drawAcademicLogo() {  
+    // Desenha o módulo na ESQUERDA (X = 100)
+    drawSideDecoration(100, 280);
+    
+    // Desenha o módulo na DIREITA (X = 600)
+    drawSideDecoration(600, 280);
 }
 
 function menuLoop() {
