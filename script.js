@@ -365,7 +365,7 @@ function showLevelBanner(text) { levelBanner.text = text; levelBanner.timer = 12
 
 const bgImg = new Image(); bgImg.src = "./space.png";
 let bossTextureData = null;
-const bossImgReal = new Image(); bossImgReal.src = "./thanos2.png";
+const bossImgReal = new Image(); bossImgReal.src = "./thanos.png";
 bossImgReal.onload = () => {
     const tempCanvas = document.createElement("canvas");
     tempCanvas.width = bossImgReal.width; tempCanvas.height = bossImgReal.height;
