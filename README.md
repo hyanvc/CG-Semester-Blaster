@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=3rdQAYKy1Pw
 ##  Equipe de Desenvolvimento
 
 * **Hyan Victor** - *Engenharia de Software & Programação Gráfica* (Implementação de todos os algoritmos de rasterização, motor físico e game loop)[cite: 2].
-* **Yasmin** - *Quality Assurance (QA) & Playtesting* (Responsável por balanceamento de dificuldade, testes de *edge-cases* na colisão e validação de usabilidade).
+* **Yasmin** - *Playtesting* (Responsável por balanceamento de dificuldade, testes de *edge-cases* na colisão e validação de usabilidade).
 
 ---
 
