@@ -352,6 +352,7 @@ function createExplosion(x, y, count = 15, colors = null) {
     explosions.push({ x, y, t: 0, maxT: 35, particles });
 }
 
+// Desenha as explosões
 function drawExplosionsManual() {
     explosions.forEach(exp => {
         exp.particles.forEach(p => {
@@ -504,7 +505,9 @@ function startGame() {
     initPixels();
 }
 
+// Inicia o modo New Game+
 function startNewGamePlus() {
+    // Atualiza a interface
     document.getElementById("menu").style.display = "none"; document.getElementById("sidebar").classList.add("active"); document.getElementById("game-container").classList.add("playing");
     canvas.style.display = "block"; gameStarted = true; gameOver = false; gameWon = false; isNewGamePlus = true; zoomLevel = 1.0; updateWorldWindow();
     score = 0; coins = 0; shipLevel = 5; fireRate = 3; playerLife = 15; level = 1; boss = null;
